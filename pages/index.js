@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 
 import styled from 'styled-components';
 
+import data from '../lib/data.json';
+
 import {
 	StatContainer,
 	SVGContainer,
@@ -48,7 +50,7 @@ export default function Home() {
 					</SVGContainer>
 					<StatProfileContainer>
 						<CurrentContainer>
-							<CardTitle>Work</CardTitle>
+							<CardTitle></CardTitle>
 							<CardHours>32hrs</CardHours>
 						</CurrentContainer>
 						<PriorContainer>
