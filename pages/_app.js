@@ -5,6 +5,7 @@ html,
 body {
 	padding: 0;
 	margin: 0;
+	background: hsl(226, 43%, 10%);
 
 }
 
