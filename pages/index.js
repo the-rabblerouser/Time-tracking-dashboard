@@ -33,7 +33,7 @@ export default function Home() {
 		<>
 			<Container>
 				<User selected={selected} setSelected={setSelected} buttons={buttons} />
-				<Stat data={data[0]} svg={WorkSVG()} />
+				<Stat selected={selected} data={data[0]} svg={WorkSVG()} />
 			</Container>
 		</>
 	);
