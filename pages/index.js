@@ -54,7 +54,12 @@ export default function Home() {
 				<UserContainer>
 					<UserProfile>
 						<ProfileContainer>
-							<div>
+							<div
+								style={{
+									display: 'flex',
+									border: '5px solid white',
+									borderRadius: '100%',
+								}}>
 								<ProfileImage src={userImage} height={70} width={70} />
 							</div>
 							<div>
