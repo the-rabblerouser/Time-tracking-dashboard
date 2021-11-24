@@ -31,8 +31,13 @@ export default function Home() {
 		display: grid;
 		place-items: center;
 		grid-template-columns: 1fr 2fr;
+		padding: 0.8rem 1.5rem 0 1.5rem;
+	`;
 
-		padding: 0.8rem 2.5rem 0 2.5rem;
+	const ImageContainer = styled.div`
+		display: grid;
+		border: 3px solid #fff;
+		border-radius: 100%;
 	`;
 
 	const ProfileImage = styled(Image)`
@@ -42,10 +47,18 @@ export default function Home() {
 
 	const ProfileTitle = styled.p`
 		font-family: 'Rubik', sans-serif;
+		font-weight: 300;
+		font-size: 0.85rem;
+		color: hsl(236, 100%, 87%);
+		margin-bottom: 0.5rem;
 	`;
 
-	const ProfileName = styled.p`
+	const ProfileName = styled.h1`
 		font-family: 'Rubik', sans-serif;
+		font-weight: 400;
+		font-size: 1.3rem;
+		color: hsl(236, 100%, 87%);
+		margin-top: 0;
 	`;
 
 	return (
@@ -54,17 +67,12 @@ export default function Home() {
 				<UserContainer>
 					<UserProfile>
 						<ProfileContainer>
-							<div
-								style={{
-									display: 'flex',
-									border: '5px solid white',
-									borderRadius: '100%',
-								}}>
+							<ImageContainer>
 								<ProfileImage src={userImage} height={70} width={70} />
-							</div>
+							</ImageContainer>
 							<div>
 								<ProfileTitle>Report for</ProfileTitle>
-								<ProfileName>Jeremy Robinson</ProfileName>
+								<ProfileName>Jeremy Robson</ProfileName>
 							</div>
 						</ProfileContainer>
 					</UserProfile>
