@@ -63,8 +63,8 @@ export const DateButton = styled.button`
 	font-size: 1.1rem;
 	background: none;
 	border: none;
-	color: ${(props) =>
-		props.selected ? 'hsl(236, 100%, 87%)' : 'hsl(235, 45%, 61%)'};
+	color: ${({ selected, button }) =>
+		selected === button ? 'hsl(236, 100%, 87%)' : 'hsl(235, 45%, 61%)'};
 	width: 100%;
 	height: 100%;
 `;

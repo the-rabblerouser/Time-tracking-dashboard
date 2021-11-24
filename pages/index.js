@@ -18,17 +18,10 @@ import userImage from '../public/images/image-jeremy.png';
 // font-family: 'Rubik', sans-serif;
 
 export default function Home() {
-	const [date, setDate] = useState({
-		daily: true,
-		weekly: false,
-		monthly: false,
-	});
+	const [selected, setSelected] = useState('Daily');
+	const [buttons, setButtons] = useState(['Daily', 'Weekly', 'Monthly']);
 
-	console.log(date);
-
-	const buttonToggle = (buttonName) => () =>
-		setDate((prev) => ({ [buttonName]: !prev[buttonName] }));
-
+	const buttonToggle = (name) => setSelected(name);
 	return (
 		<>
 			<Container>
@@ -45,17 +38,15 @@ export default function Home() {
 						</ProfileContainer>
 					</UserProfile>
 					<DateContainer>
-						<DateButton selected={date.daily} onClick={buttonToggle('daily')}>
-							Daily
-						</DateButton>
-						<DateButton selected={date.weekly} onClick={buttonToggle('weekly')}>
-							Weekly
-						</DateButton>
-						<DateButton
-							selected={date.monthly}
-							onClick={buttonToggle('monthly')}>
-							Monthly
-						</DateButton>
+						{buttons.map((btn, i) => (
+							<DateButton
+								key={btn}
+								selected={selected}
+								button={buttons[i]}
+								onClick={() => buttonToggle(btn)}>
+								{btn}
+							</DateButton>
+						))}
 					</DateContainer>
 				</UserContainer>
 			</Container>
