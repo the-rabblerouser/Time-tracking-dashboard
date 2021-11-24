@@ -40,6 +40,11 @@ export default function Home() {
 		</svg>
 	);
 
+	const {
+		title,
+		timeframes: { daily, weekly, monthly },
+	} = data[0];
+
 	return (
 		<>
 			<Container>
@@ -50,12 +55,12 @@ export default function Home() {
 					</SVGContainer>
 					<StatProfileContainer>
 						<CurrentContainer>
-							<CardTitle></CardTitle>
-							<CardHours>32hrs</CardHours>
+							<CardTitle>{title}</CardTitle>
+							<CardHours>{daily.current}hrs</CardHours>
 						</CurrentContainer>
 						<PriorContainer>
 							<Dots>•••</Dots>
-							<PriorHours>Last Week - 8hrs</PriorHours>
+							<PriorHours>Last Week - {daily.previous}hrs</PriorHours>
 						</PriorContainer>
 					</StatProfileContainer>
 				</StatContainer>
