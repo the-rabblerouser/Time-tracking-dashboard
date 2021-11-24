@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Image from 'next/image';
 
 import {
@@ -18,6 +18,17 @@ import userImage from '../public/images/image-jeremy.png';
 // font-family: 'Rubik', sans-serif;
 
 export default function Home() {
+	const [date, setDate] = useState({
+		daily: true,
+		weekly: false,
+		monthly: false,
+	});
+
+	console.log(date);
+
+	const buttonToggle = (buttonName) => () =>
+		setDate((prev) => ({ [buttonName]: !prev[buttonName] }));
+
 	return (
 		<>
 			<Container>
@@ -34,9 +45,17 @@ export default function Home() {
 						</ProfileContainer>
 					</UserProfile>
 					<DateContainer>
-						<DateButton>Daily</DateButton>
-						<DateButton>Weekly</DateButton>
-						<DateButton>Monthly</DateButton>
+						<DateButton selected={date.daily} onClick={buttonToggle('daily')}>
+							Daily
+						</DateButton>
+						<DateButton selected={date.weekly} onClick={buttonToggle('weekly')}>
+							Weekly
+						</DateButton>
+						<DateButton
+							selected={date.monthly}
+							onClick={buttonToggle('monthly')}>
+							Monthly
+						</DateButton>
 					</DateContainer>
 				</UserContainer>
 			</Container>
