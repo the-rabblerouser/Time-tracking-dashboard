@@ -10,12 +10,12 @@ import userImage from '../public/images/image-jeremy.png';
 export default function Home() {
 	const Container = styled.div`
 		display: grid;
-		justify-content: center;
+		place-items: center;
 	`;
 
 	const UserContainer = styled.div`
 		background: hsl(235, 46%, 20%);
-		height: 12rem;
+		height: 11rem;
 		width: 20rem;
 		border-radius: 10px;
 	`;
@@ -56,6 +56,26 @@ export default function Home() {
 		margin-top: 0;
 	`;
 
+	const DateContainer = styled.div`
+		display: grid;
+		justify-items: space-around;
+		align-items: center;
+		grid-template-columns: 1fr 1fr 1fr;
+		width: 20rem;
+		height: 3.5rem;
+	`;
+
+	const DateButton = styled.button`
+		font-family: 'Rubik', sans-serif;
+		font-weight: 400;
+		font-size: 1.1rem;
+		background: none;
+		border: none;
+		color: hsl(236, 100%, 87%);
+		width: 100%;
+		height: 100%;
+	`;
+
 	return (
 		<>
 			<Container>
@@ -71,6 +91,11 @@ export default function Home() {
 							</div>
 						</ProfileContainer>
 					</UserProfile>
+					<DateContainer>
+						<DateButton>Daily</DateButton>
+						<DateButton>Weekly</DateButton>
+						<DateButton>Monthly</DateButton>
+					</DateContainer>
 				</UserContainer>
 			</Container>
 		</>
