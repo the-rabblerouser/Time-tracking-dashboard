@@ -40,11 +40,6 @@ export default function Home() {
 		border-radius: 100%;
 	`;
 
-	const ProfileImage = styled(Image)`
-		border: 10px solid;
-		border-radius: 100%;
-	`;
-
 	const ProfileTitle = styled.p`
 		font-family: 'Rubik', sans-serif;
 		font-weight: 300;
@@ -68,7 +63,7 @@ export default function Home() {
 					<UserProfile>
 						<ProfileContainer>
 							<ImageContainer>
-								<ProfileImage src={userImage} height={70} width={70} />
+								<Image src={userImage} height={70} width={70} />
 							</ImageContainer>
 							<div>
 								<ProfileTitle>Report for</ProfileTitle>
