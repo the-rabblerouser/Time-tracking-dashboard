@@ -15,8 +15,6 @@ import {
 import User from '../lib/components/User';
 import Stat from '../lib/components/Stat';
 
-// font-family: 'Rubik', sans-serif;
-
 const Container = styled.div`
 	display: grid;
 	place-items: center;
