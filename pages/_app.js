@@ -6,7 +6,7 @@ body {
 	padding: 0;
 	margin: 0;
 	background: hsl(226, 43%, 10%);
-
+	min-height: 100%;
 }
 
 a {
