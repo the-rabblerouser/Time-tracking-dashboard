@@ -1,8 +1,5 @@
 import React, { useState } from 'react';
 
-import styled from 'styled-components';
-
-import data from '../lib/data.json';
 import {
 	WorkSVG,
 	PlaySVG,
@@ -11,42 +8,14 @@ import {
 	SocialSVG,
 	SelfCareSVG,
 } from '../lib/icons/Icons';
-
+import {
+	AppContainer,
+	Container,
+	AllStatsContainer,
+} from '../lib/styled-components/Containers.styled';
 import User from '../lib/components/User';
 import Stat from '../lib/components/Stat';
-
-const AppContainer = styled.div`
-	@media (min-width: 500px) {
-		display: grid;
-		height: 100vh;
-		width: 100%;
-		place-items: center;
-	}
-`;
-
-const Container = styled.div`
-	display: grid;
-	place-items: center;
-	margin-top: 2rem;
-
-	@media (min-width: 500px) {
-		display: grid;
-		grid-template-columns: 1fr 3fr;
-		margin-top: 0;
-		height: 32rem;
-	}
-`;
-
-const AllStatsContainer = styled.div`
-	@media (min-width: 500px) {
-		display: grid;
-		grid-template-columns: 1fr 1fr 1fr;
-		grid-template-rows: 1fr 1fr;
-		gap: 1rem 1rem;
-		width: 100%;
-		height: 100%;
-	}
-`;
+import data from '../lib/data.json';
 
 export default function Home() {
 	const [selected, setSelected] = useState('Daily');
