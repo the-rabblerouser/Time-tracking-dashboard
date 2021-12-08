@@ -7,7 +7,7 @@ import {
 	ExerciseSVG,
 	SocialSVG,
 	SelfCareSVG,
-} from '../lib/icons/Icons';
+} from '../lib/Icons';
 import {
 	AppContainer,
 	Container,
