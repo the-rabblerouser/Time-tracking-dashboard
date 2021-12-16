@@ -2,10 +2,8 @@
 ![React](https://img.shields.io/badge/React-17.0.2-61dafb)
 ![Next](https://img.shields.io/badge/Next.js-%5E12.0.4-0baf7c)
 
-## Frontend Mentor Challenge Page
-https://www.frontendmentor.io/challenges/time-tracking-dashboard-UIQ7167Jw
 
-<!-- [Checkout it out!](http://) -->
+[Checkout it out!](https://time-tracking-kappa.vercel.app/)
 
 
 ## Features
@@ -21,6 +19,9 @@ https://www.frontendmentor.io/challenges/time-tracking-dashboard-UIQ7167Jw
 ### Mobile
 <img src="https://github.com/the-rabblerouser/Time-tracking-dashboard/blob/main/public/finished%20images/Mobile.png" />
 
+
+## Frontend Mentor Challenge Page
+https://www.frontendmentor.io/challenges/time-tracking-dashboard-UIQ7167Jw
 
 ## Author
 
